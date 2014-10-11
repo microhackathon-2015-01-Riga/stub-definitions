@@ -1,0 +1,50 @@
+apply plugin: 'maven-publish'
+apply plugin: 'java'
+apply plugin: 'com.jfrog.bintray'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.ofg:uptodate-gradle-plugin:1.1.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:+'
+        if (project.hasProperty("coverage")) { classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:+' }
+    }
+}
+
+group = 'com.ofg'
+description = 'Contains examples of stubs for the stub-runner'
+version = '0.0.1'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+jar {
+    from "commitHash.txt"
+    from 'repository'
+}
+
+bintrayUpload.dependsOn 'build'
+
+bintray {
+    user = System.properties['bintrayUser']
+    key = System.properties['bintrayKey']
+
+    publications = ['mavenJava']
+    pkg {
+        repo = 'micro'
+        userOrg = '4finance'
+        name = project.name
+        desc = project.description
+        licenses = ['Apache-2.0']
+        labels = ['microservice']
+    }
+}
