@@ -9,15 +9,13 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.ofg:uptodate-gradle-plugin:1.1.0'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:+'
-        if (project.hasProperty("coverage")) { classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:+' }
     }
 }
 
 group = 'com.ofg'
 description = 'Contains examples of stubs for the stub-runner'
-version = '0.0.2-SNAPSHOT'
+version = '0.0.3-SNAPSHOT'
 
 publishing {
     publications {
@@ -29,7 +27,9 @@ publishing {
 
 jar {
     from "commitHash.txt"
-    from 'repository'
+    from('repository') {
+        into 'repository'
+    }
 }
 
 bintrayUpload.dependsOn 'build'
