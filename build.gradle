@@ -27,9 +27,7 @@ publishing {
 
 jar {
     from "commitHash.txt"
-    from('repository') {
-        into 'repository'
-    }
+    from 'repository'
 }
 
 bintrayUpload.dependsOn 'build'
