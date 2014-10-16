@@ -15,7 +15,7 @@ buildscript {
 
 group = 'com.ofg'
 description = 'Contains examples of stubs for the stub-runner'
-version = '0.0.4'
+version = '0.0.5-SNAPSHOT'
 
 publishing {
     publications {
