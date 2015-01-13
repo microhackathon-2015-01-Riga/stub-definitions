@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "api/loanApplication/1"
+    },
+    "response": {
+        "status": 200,
+        "body": {
+            "applicationId": "1",
+            "allowed": true
+        }
+    }
+}

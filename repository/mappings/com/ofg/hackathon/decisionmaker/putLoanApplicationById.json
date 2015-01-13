@@ -1,0 +1,16 @@
+{
+    "request": {
+        "method": "PUT",
+        "url": "api/loanApplication/1"
+    },
+    "response": {
+        "status": 200,
+        "body": {
+            "firstName": "Sandris",
+            "lastName": "Artemjevs",
+            "job": "4finance CEO",
+            "amount": 1000,
+            "fraudStatus": "none"
+        }
+    }
+}
