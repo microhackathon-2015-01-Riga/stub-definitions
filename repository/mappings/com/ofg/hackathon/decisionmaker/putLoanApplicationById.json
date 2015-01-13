@@ -4,7 +4,7 @@
         "url": "api/loanApplication/1"
     },
     "response": {
-        "status": 200,
+        "status": 201,
         "body": {
             "firstName": "Sandris",
             "lastName": "Artemjevs",
