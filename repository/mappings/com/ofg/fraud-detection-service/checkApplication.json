@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "PUT",
-    "url": "/api/loanApplication"
+    "url": "/api/loanApplication/[0-9]+"
   },
   "response": {
     "status": 200
