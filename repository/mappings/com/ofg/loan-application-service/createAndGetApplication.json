@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "POST",
-    "url": "/api/loanApplication"
+    "urlPattern": "/api/loanApplication"
   },
   "response": {
     "status": 201
