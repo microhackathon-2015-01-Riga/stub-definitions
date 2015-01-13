@@ -4,10 +4,6 @@
         "url": "api/loanApplication/[0-9]+"
     },
     "response": {
-        "status": 200,
-        "body": {
-            "applicationId": "1",
-            "allowed": true
-        }
+        "status": 200
     }
 }
