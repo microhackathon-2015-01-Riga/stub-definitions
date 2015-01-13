@@ -1,7 +1,7 @@
 {
     "request": {
         "method": "GET",
-        "url": "api/loanApplication/1"
+        "url": "api/loanApplication/[0-9]+"
     },
     "response": {
         "status": 200,
