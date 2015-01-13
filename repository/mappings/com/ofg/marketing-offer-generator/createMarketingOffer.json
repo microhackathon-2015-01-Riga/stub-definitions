@@ -1,9 +1,14 @@
 {
     "request": {
         "method": "PUT",
-        "urlPattern": "/api/marketing/[0-9]+"
+        "urlPattern": "/api/marketing/[0-9]+",
+        "headers": {
+            "Content-Type": {
+                "equalTo": "application/json"
+            }
+        }
     },
     "response": {
-        "status": 200
+        "status": 201
     }
 }
