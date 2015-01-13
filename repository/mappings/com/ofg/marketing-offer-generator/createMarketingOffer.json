@@ -1,7 +1,7 @@
 {
     "request": {
         "method": "PUT",
-        "url": "/api/marketing/[0-9]+"
+        "urlPattern": "/api/marketing/[0-9]+"
     },
     "response": {
         "status": 200

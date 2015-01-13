@@ -1,7 +1,7 @@
 {
     "request": {
         "method": "GET",
-        "url": "/api/marketing/[A-Za-z]+_[A-Za-z]+"
+        "urlPattern": "/api/marketing/[A-Za-z]+_[A-Za-z]+"
     },
     "response": {
         "status": 200    
