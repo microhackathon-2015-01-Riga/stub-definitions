@@ -16,8 +16,6 @@ buildscript {
 }
 
 group = 'com.ofg'
-description = 'Contains examples of stubs for the stub-runner'
-version = '0.0.5-SNAPSHOT'
 
 repositories {
     mavenLocal()
@@ -43,19 +41,18 @@ jar {
     from 'repository'
 }
 
-bintrayUpload.dependsOn 'build'
+uploadArchives.dependsOn 'build'
 
-bintray {
-    user = System.properties['bintrayUser']
-    key = System.properties['bintrayKey']
+ext.currentVersion = project.hasProperty('buildNr') ? "${buildNr}" : '000'
+version = "CD-${currentVersion}"
 
-    publications = ['mavenJava']
-    pkg {
-        repo = 'micro'
-        userOrg = '4finance'
-        name = project.name
-        desc = project.description
-        licenses = ['Apache-2.0']
-        labels = ['microservice']
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: "http://nexus.hackathon.dev.4finance.net:8081/nexus/content/repositories/releases/") {
+            authentication(userName: 'admin', password: 'admin123')
+        }
+        pom.version = currentVersion
+        pom.artifactId = 'stub-definitions'
+        pom.groupId = 'com.ofg'
     }
 }
