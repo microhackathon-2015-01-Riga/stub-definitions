@@ -4,13 +4,6 @@
         "url": "api/loanApplication/[0-9]+"
     },
     "response": {
-        "status": 201,
-        "body": {
-            "firstName": "Sandris",
-            "lastName": "Artemjevs",
-            "job": "4finance CEO",
-            "amount": 1000,
-            "fraudStatus": "none"
-        }
+        "status": 201
     }
 }
