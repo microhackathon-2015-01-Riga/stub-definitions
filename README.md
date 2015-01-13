@@ -1,4 +1,4 @@
-stub-runner-examples
+stub-defintions
 ====================
 
-Repository containing stub examples (used for testing of the Consumer Driven Contracts)
+Repository containing stub definitions
